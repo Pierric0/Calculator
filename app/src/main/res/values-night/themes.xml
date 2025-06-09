@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Taschenrechner" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#D9A873</item>
+        <item name="colorPrimaryDark">#E64A19</item> <!-- Statusleiste -->
+        <item name="colorAccent">#FFC107</item>   <!-- Akzentfarbe -->
+        <!-- <item name="android:windowContentOverlay">@null</item> -->
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>

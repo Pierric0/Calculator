@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/interaktivesframe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anzeige"
+        app:layout_constraintWidth_percent="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/divers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:background="#9ABEE9"
+            app:layout_constraintBottom_toTopOf="@id/operatoren"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.2"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1.0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plusminus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_special"
+                android:text="±"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/loesch"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loesch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_special"
+                android:text="C"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gleich"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintStart_toEndOf="@id/plusminus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gleich"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_equal"
+                android:text="="
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="1"
+                app:layout_constraintStart_toEndOf="@id/loesch"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.333" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/zahlenfeld"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:background="#5193ED"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+
+            app:layout_constraintStart_toEndOf="@id/operatoren"
+            app:layout_constraintTop_toBottomOf="@id/divers"
+            app:layout_constraintWidth_percent="0.75">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/eins"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="@string/_1"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/vier"
+                app:layout_constraintEnd_toStartOf="@id/zwei"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/zwei"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="2"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/vier"
+                app:layout_constraintEnd_toStartOf="@id/drei"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/eins"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/drei"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="3"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/sechs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/zwei"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/vier"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="4"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/sieben"
+                app:layout_constraintEnd_toStartOf="@id/fuenf"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eins"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fuenf"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="5"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/acht"
+                app:layout_constraintEnd_toStartOf="@id/sechs"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/vier"
+                app:layout_constraintTop_toBottomOf="@id/zwei"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sechs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="6"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="@id/neun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/fuenf"
+                app:layout_constraintTop_toBottomOf="@id/drei"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sieben"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="7"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/nullzahl"
+                app:layout_constraintEnd_toStartOf="@id/acht"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vier"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acht"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="8"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/nullzahl"
+                app:layout_constraintEnd_toStartOf="@id/neun"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/sieben"
+                app:layout_constraintTop_toBottomOf="@id/fuenf"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/neun"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="9"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="@id/komma"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/acht"
+                app:layout_constraintTop_toBottomOf="@id/sechs"
+                app:layout_constraintWidth_percent="0.333" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nullzahl"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="0"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/komma"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sieben"
+                app:layout_constraintWidth_percent="0.666" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/komma"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border"
+                android:text="."
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toEndOf="@id/nullzahl"
+                app:layout_constraintTop_toBottomOf="@id/neun"
+                app:layout_constraintWidth_percent="0.333" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/operatoren"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:background="#B8CDEF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/zahlenfeld"
+            app:layout_constraintHeight_percent="0.8"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divers"
+            app:layout_constraintWidth_percent="0.25">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_operator"
+                android:text="*"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/durch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/durch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_operator"
+                android:text="/"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mal"
+                app:layout_constraintWidth_percent="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_operator"
+                android:text="+"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toTopOf="@id/minus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/durch"
+                app:layout_constraintWidth_percent="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_border_operator"
+                android:text="-"
+                android:textSize="@dimen/schriftgroesse"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/plus"
+                app:layout_constraintWidth_percent="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/anzeige"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D9A873"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/ergebnis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/ergebnis"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D9A873"
+        android:gravity="end"
+
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/interaktivesframe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anzeige"
+        app:layout_constraintWidth_percent="1">
+
+    </TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/border"
+        app:layout_constraintTop_toBottomOf="@id/ergebnis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
